@@ -1,0 +1,36 @@
+services:
+  frontend:
+    build:
+      context: .
+    container_name: naatify-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    mem_limit: 160m
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+    container_name: naatify-backend
+    restart: unless-stopped
+    expose:
+      - "8000"
+    mem_limit: 256m
+    env_file:
+      - .env
+    environment:
+      COOKIE_SECURE: "false"
+    volumes:
+      - ./data:/data
+      - /var/lib/naatify:/var/lib/naatify
+
+  kannada:
+    build:
+      context: ./kannada-service
+    container_name: naatify-kannada
+    restart: unless-stopped
+    expose:
+      - "8001"
+    mem_limit: 1536m

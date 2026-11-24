@@ -1,0 +1,11 @@
+.git
+.env
+.env.*
+data/
+node_modules/
+dist/
+*.db
+*.sqlite
+*.sqlite3
+compose.yml.backup
+nginx.conf.backup

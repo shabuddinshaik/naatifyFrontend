@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+python-multipart
+argon2-cffi
+PyJWT
+pypdf>=5,<7
+
+git+https://github.com/hammasbuilds/urdunlp.git@5d3f7f81430822edc7a587efc8fb97712db366f0
+Pillow>=10,<13

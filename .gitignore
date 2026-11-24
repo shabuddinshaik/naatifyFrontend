@@ -1,0 +1,31 @@
+.env
+data/
+
+# Dependencies and generated builds
+node_modules/
+dist/
+
+# Backups
+backups/
+backup-collections-*/
+*.backup
+*.bak
+*.bak-*
+
+# Local databases and runtime files
+*.db
+*.db-shm
+*.db-wal
+
+# Historical source and configuration backups
+*backup*
+*.before*
+*.pre-*
+*.pre_*
+
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# All remaining backup naming patterns
+*.bak*
